@@ -22,13 +22,13 @@ print("""
 
 
 topic = "Star Wars"
-index_name = "book_wookieepedia_mpnet"
+index_name = "book_wookieepedia_mpet2"
 
 # Huggingface embedding setup
 hf = lib_embeddings.setup_embeddings()
 
 ## Elasticsearch as a vector db
-db, url = lib_vectordb.setup_vectordb(hf,index_name)
+db = lib_vectordb.setup_vectordb(hf,index_name)
 
 ## set up the conversational LLM
 llm_chain_informed= lib_llm.make_the_llm()
